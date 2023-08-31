@@ -1,10 +1,12 @@
 public class Card {
     String name;
-    String rarity;
-    String flavor;
     String type;
-    String ManaCosta;
-    int power;
-    int resistance;
 
+    @Override
+    public String toString() {
+        return "Card{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
 }

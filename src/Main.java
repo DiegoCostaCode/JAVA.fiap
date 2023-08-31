@@ -1,9 +1,14 @@
 import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Main {
+
+    //public static é o método//
+
     public static void main(String[] args) {System.out.println("========Hello, welcome to the card searcher========");
 
-        Scanner scanner = new Scanner (System.in);
+        var scanner = new Scanner (System.in);
+        var novacarta = Cadastrarcard (Scanner scanner);
+        var novacarta2= Cadastrarcard (Scanner scanner);
 
         System.out.println("First, enter the card name: ");
         var carta1= scanner.nextLine();
@@ -17,7 +22,7 @@ public class Main {
         System.out.println("Ok, enter the rarity: ");
         var carta1_rarity= scanner.nextLine();
 
-        System.out.println("What is it abilities? ");
+        System.out.println("What is its abilities? ");
         var carta1_abilities= scanner.nextLine();
 
         System.out.println("Enter the flavor: ");
@@ -37,7 +42,15 @@ public class Main {
 
 
     }
+    public static Card Cadastrarcard (Scanner scanner){
+    var novaCarta = new Card();
+    System.out.println ("Digite o nome da carta: ");
+    var nome = scanner.nextLine();
 
+    System.out.printLn(("Digite o tipo da carta: ");
 
+    novaCarta.nome = nome;
+    novaCarta.tipo = tipo;
 
+    return novaCarta;
 }
